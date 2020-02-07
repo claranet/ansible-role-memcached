@@ -1,0 +1,29 @@
+---
+
+galaxy_info:
+  role_name: "memcached"
+  author: "Claranet"
+  namespace: "claranet"
+  description: "Install and configure memcached"
+  company: "Claranet France"
+  license: "MPL2"
+  min_ansible_version: "2.10"
+
+  platforms:
+    - name: EL
+      versions:
+        - all
+    - name: Amazon
+      versions:
+        - all
+    - name: Debian
+      versions:
+        - all
+    - name: Ubuntu
+      versions:
+        - all
+
+
+  galaxy_tags: ['claranet', 'memcached', 'system']
+
+dependencies: []
