@@ -17,7 +17,7 @@
   loop_control:
     loop_var: loop_vars
 
-- name: Include "install_{{ ansible_pkg_mgr }}.yml"
+- name: Include "install_{{ ansible_pkg_mgr }}.yml"   # noqa name
   ansible.builtin.include_tasks: "install_{{ ansible_pkg_mgr }}.yml"
 
 - name: Mask memcached service
@@ -48,8 +48,8 @@
     group: root
     mode: 0444
   notify:
-    - warn that memcached should be restarted
-    - systemctl restart memcached@{{ memcached_port }}.service
+    - Warn that memcached should be restarted
+    - Systemctl restart memcached@{{ memcached_port }}.service
 
 - name: Activate memcached service
   ansible.builtin.systemd:

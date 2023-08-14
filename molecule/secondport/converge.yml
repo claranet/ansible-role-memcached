@@ -2,11 +2,11 @@
 - name: Converge
   hosts: all
   tasks:
-    - name: role with default option
+    - name: Role with default option
       ansible.builtin.include_role:
         name: claranet.memcached
 
-    - name: role no default port
+    - name: Role no default port
       ansible.builtin.include_role:
         name: claranet.memcached
       vars:
