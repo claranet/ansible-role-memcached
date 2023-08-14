@@ -1,5 +1,5 @@
 ---
-- name: warn that memcached should be restarted
+- name: "Warn that memcached should be restarted"
   ansible.builtin.debug:
     msg:
       - "****"
@@ -9,7 +9,7 @@
       - "****"
   when: not memcached_restart
 
-- name: systemctl restart memcached@{{ memcached_port }}.service
+- name: "Systemctl restart memcached@{{ memcached_port }}.service"    # noqa name
   ansible.builtin.service:
     name: memcached@{{ memcached_port }}.service
     state: restarted
