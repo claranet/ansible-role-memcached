@@ -63,7 +63,7 @@ jobs:
           - image: "debian"
             tag: "11"
           - image: "ubuntu"
-            tag: "20.04"
+            tag: "22.04"
           - image: ubuntu
             tag: "24.04"
     steps:
